@@ -1,6 +1,6 @@
 
 from obj import Assessment
-#from obj import GUI
+from obj import GUI
 import sqlite3 as sq
 from obj import Course
 
@@ -28,7 +28,7 @@ def main():
 
     print(testCourse.minForNextGradeLine())
 
-    #GUI()
+    GUI()
 
     #ALL DATABASE CONNECTIONS ABOVE HERE
     db.close()
@@ -36,4 +36,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
