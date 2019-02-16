@@ -45,6 +45,8 @@ class Course:
         if asst[0] in self.assessments:
             self.assessments[asst[0]].add_grades(asst[-1])
         else :
-            self.assessments[asst[0]] = Assessment(asst[0], asst[1],
-            )
+            #need to figure out how to add total and whether or not
+            #the assessment is a midterm
+            self.assessments[asst[0]] = Assessment(asst[0], asst[1])
+            self.assessments[asst[0]].add_grades(asst[-1])
         self.assessments.append(asst)
