@@ -81,7 +81,6 @@ class Course:
         return self.name
 
     def add_asst(self, asst):
-<<<<<<< HEAD
         if asst[0] in self.assessments:
             self.assessments[asst[0]].add_grades(asst[-1])
         else :
@@ -94,8 +93,7 @@ class Course:
         for asst in self.assessments:
             avg += asst.get_percentage() / float(100) * asst.get_average()
         return avg
-=======
         self.assessments[asst.name] = asst
 
         self.calculateGrade()
->>>>>>> 8eef5b735a8719693bb85157f059bc1f6b5ebf47
+
