@@ -67,32 +67,10 @@ class Course:
 
         #do algebra
 
-
-
-
-
-
-
-
     def get_name(self):
         return self.name
 
     def add_asst(self, asst):
-<<<<<<< HEAD
-        if asst[0] in self.assessments:
-            self.assessments[asst[0]].add_grades(asst[-1])
-        else :
-            self.assessments[asst[0]] = Assessment(asst[0], asst[1],
-            )
-        self.assessments.append(asst)
-
-    def test_average(self):
-        avg = 0
-        for asst in self.assessments:
-            avg += asst.get_percentage() / float(100) * asst.get_average()
-        return avg
-=======
         self.assessments[asst.name] = asst
 
         self.calculateGrade()
->>>>>>> 8eef5b735a8719693bb85157f059bc1f6b5ebf47
