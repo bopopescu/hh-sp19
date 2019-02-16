@@ -1,3 +1,5 @@
-def run_algorithm():
-    for course in Courses:
-        for assignment in Ass
+def run_algorithm(Semester):
+    averages = []
+    for courses in Semester.get_courses():
+        for asst in courses.get_asst():
+            
