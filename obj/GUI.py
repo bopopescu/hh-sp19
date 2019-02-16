@@ -1,15 +1,17 @@
 from tkinter import *
+
 import sqlite3 as sq
+class GUI(Frame):
+        top = Tk()
+        # BEGIN GUI BOX.
 
-class GUI:
-    top = Tk()
-    # BEGIN GUI BOX.
-    top.title("Study Helper")
-    label = Label(top, text="by Spencer, Kaushik, and Stephanie").pack()
+        text = Text(top)
+        text.pack()
 
-    #text = Text(top)
-    #text.insert(INSERT, "by Spencer, Kaushik, and Stephanie")
-    #text.pack()
+        top.title("Study Helper")
+        label = Label(top, text="by Spencer, Kaushik, and Stephanie").pack()
 
-    # END GUI BOX
-    top.mainloop()
+        # END GUI BOX
+        top.mainloop()
+
+
