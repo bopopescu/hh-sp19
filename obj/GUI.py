@@ -2,6 +2,7 @@ from tkinter import *
 
 import sqlite3 as sq
 
+<<<<<<< HEAD
 class GUI(Frame):
         top = Tk()
         # BEGIN GUI BOX.
@@ -9,6 +10,10 @@ class GUI(Frame):
         text = Text(top)
         text.pack()
 
+        top.title("Study Helper")
+        label = Label(top, text="by Spencer, Kaushik, and Stephanie").pack()
+
         # END GUI BOX
         top.mainloop()
+
 
