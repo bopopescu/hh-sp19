@@ -5,14 +5,12 @@ class Course:
 
     grade = 0
 
-    dist = [90, 80, 70, 60, 50]
-
     def __init__(self, name, credits):
         self.name = name
         self.assessments = {}
         self.credits = credits
-        if len(self.assessments) > 0:
-            self.grade = self.calculateGrade()
+        if len(self.assessments.keys()) > 0:
+            self.grade = self.currentGrade()
         else:
             self.grade = None
         self.grade_dist = self.get_grade_dist()
@@ -29,12 +27,17 @@ class Course:
     def print(self):
         print("------- {0} ------({1})".format(self.name, self.credits))
         print("--- Course Data ---")
+        print("CURRENT GRADE %.2f" % self.currentGrade())
         for asst in self.assessments.keys():
             print("---AVG %s: - %.2f" % (self.assessments[asst].get_name(), self.assessments[asst].get_average()))
 
         print()
         for asst in self.assessments.keys():
             self.assessments[asst].print()
+
+    def getGradeLetter(self):
+        grades = self.grade_dist.keys()
+
 
     def get_grade_dist(self):
         dist = {}
@@ -44,22 +47,21 @@ class Course:
             dist[int(temp[1])] = temp[0]
         return dist
 
-        if len(self.assessments) != 0:
-            self.calculateGrade()
-        else:
-            self.grade = 0
+        # if len(self.assessments) != 0:
+        #     self.calculateGrade()
+        # else:
+        #     self.grade = 0
 
-    def calculateGrade(self):
-        percentComplete = 0
+
+    def currentGrade(self):
         grade = 0
-        # recalculate grade
-        for k in self.assessments:
-            if self.assessments[k].completed:
-                percentComplete += self.assessments[k].percentage
-                grade += (sum(self.assessments[k].grades) / self.assessments[k].completed) * (
-                    self.assessments[k].percentage)
-        self.grade = grade / percentComplete
-        print("current grade" + str(self.grade) + "\n")
+        percentSum = 0
+        for asst in self.assessments.keys():
+            grade += self.assessments[asst].get_percentage() * self.assessments[asst].get_average()
+            percentSum += self.assessments[asst].get_percentage()
+        return grade / float(percentSum)
+
+
 
     #next highest grade line
     def findTarget(self):

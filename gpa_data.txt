@@ -44,7 +44,7 @@ Deep Learning,4,Homework,40,6,0,84
 Deep Learning,4,Homework,40,6,0,94
 Deep Learning,4,Homework,40,6,0,86.5
 Deep Learning,4,Homework,40,6,0,100
-Deep Learning,4,Midterm,25,9,1,99.09
+Deep Learning,4,Midterm,25,9,1,70
 Intro Opti,4,Homework,15,9,0,75
 Intro Opti,4,Homework,15,9,0,75
 Intro Opti,4,Homework,15,9,0,73.33

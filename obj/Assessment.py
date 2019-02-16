@@ -1,7 +1,7 @@
 class Assessment:
     def __init__(self, name, percentage, total, isMidterm):
         self.name = name
-        self.percentage = percentage
+        self.percentage = int(percentage)
         self.grades = []
         self.total = total
         self.completed = 0
@@ -21,4 +21,4 @@ class Assessment:
         return avg
 
     def print(self):
-        print("---- {0} -- ({1}%): {2}".format(self.name, self.percentage, self.grades))
+        print("---- {0} -- ({1}): {2}".format(self.name, self.percentage, self.grades))
