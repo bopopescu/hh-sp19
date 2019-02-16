@@ -1,5 +1,5 @@
 class Semester():
-    def __init__(self, name, percentage, isCompleted):
+    def __init__(self, name):
         self.name = name
         self.courses = []
 
