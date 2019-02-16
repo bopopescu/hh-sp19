@@ -16,15 +16,14 @@ if __name__ == '__main__':
 
         while line:
             descriptions = line.split(",")
-            
+
             if description[0] in courses:
                 courses[description[0]].add_asst(description[2:])
-            temp = Course(descriptions[0], descriptions[1])
+            else:
+                temp = Course(descriptions[0], descriptions[1])
+                courses.append(temp)
+                courses.[description[0]].add_asst(description[2:])
 
-
-            courses.append(temp)
-            for description in descriptions:
-                courses.append()
             line = gpa_data.readline()
 
 
