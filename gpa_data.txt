@@ -1,1 +1,58 @@
-Data Structures,4,homework,10,98
+DiffEQ,4,Homework,10,10,0,93.33
+DiffEQ,4,Homework,10,10,0,96.67
+DiffEQ,4,Homework,10,10,0,100
+DiffEQ,4,Homework,10,10,0,96.67
+DiffEQ,4,Homework,10,10,0,90
+DiffEQ,4,Homework,10,10,0,100
+DiffEQ,4,Homework,10,10,0,83.33
+DiffEQ,4,Homework,10,10,0,83.33
+DiffEQ,4,Homework,10,10,0,96.67
+DiffEQ,4,Homework,10,10,0,93.33
+DiffEQ,4,Midterm,10,10,3,91
+DiffEQ,4,Midterm,10,10,3,83
+DiffEQ,4,Midterm,10,10,3,83
+Intro Stats,4,Homework,20,11,0,81.48
+Intro Stats,4,Homework,20,11,0,86.67
+Intro Stats,4,Homework,20,11,0,90.77
+Intro Stats,4,Homework,20,11,0,86.27
+Intro Stats,4,Homework,20,11,0,89.06
+Intro Stats,4,Homework,20,11,0,100
+Intro Stats,4,Homework,20,11,0,100
+Intro Stats,4,Homework,20,11,0,87.23
+Intro Stats,4,Homework,20,11,0,78.72
+Intro Stats,4,Homework,20,11,0,83.78
+Intro Stats,4,Homework,20,11,0,100
+Intro Stats,4,Midterms,20,2,0,92.63
+Intro Stats,4,Midterms,20,2,0,90.77
+Intro Stats,4,Quiz,20,5,0,100
+Intro Stats,4,Quiz,20,5,0,100
+Intro Stats,4,Quiz,20,5,0,100
+Intro Stats,4,Quiz,20,5,0,100
+Intro Stats,4,Quiz,20,5,0,100
+Deep Learning,4,Quizzes,15,9,0,80
+Deep Learning,4,Quizzes,15,9,0,60
+Deep Learning,4,Quizzes,15,9,0,60
+Deep Learning,4,Quizzes,15,9,0,80
+Deep Learning,4,Quizzes,15,9,0,50
+Deep Learning,4,Quizzes,15,9,0,100
+Deep Learning,4,Quizzes,15,9,0,80
+Deep Learning,4,Quizzes,15,9,0,100
+Deep Learning,4,Quizzes,15,9,0,100
+Deep Learning,4,Homework,40,6,0,99.09
+Deep Learning,4,Homework,40,6,0,70
+Deep Learning,4,Homework,40,6,0,84
+Deep Learning,4,Homework,40,6,0,94
+Deep Learning,4,Homework,40,6,0,86.5
+Deep Learning,4,Homework,40,6,0,100
+Deep Learning,4,Midterm,25,9,1,99.09
+Intro Opti,4,Homework,15,9,0,75
+Intro Opti,4,Homework,15,9,0,75
+Intro Opti,4,Homework,15,9,0,73.33
+Intro Opti,4,Homework,15,9,0,100
+Intro Opti,4,Homework,15,9,0,80
+Intro Opti,4,Homework,15,9,0,98
+Intro Opti,4,Homework,15,9,0,95
+Intro Opti,4,Homework,15,9,0,96
+Intro Opti,4,Homework,15,9,0,87.5
+Intro Opti,4,Midterm,85,9,1,86
+Intro Opti,4,Midterm,85,9,1,100
