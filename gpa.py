@@ -8,14 +8,23 @@ if __name__ == '__main__':
     if (os.stat("gpa_data.txt").st_size == 0):
         isEmpty = True
 
-    #semester, course, credits, assignment, weight, grade
+    #course, credits, assignment, weight, grade
+    courses = {}
+
     if (isEmpty == False):
         line = gpa_data.readline()
 
         while line:
             descriptions = line.split(",")
+            
+            if description[0] in courses:
+                courses[description[0]].add_asst(description[2:])
+            temp = Course(descriptions[0], descriptions[1])
+
+
+            courses.append(temp)
             for description in descriptions:
-                print(description)
+                courses.append()
             line = gpa_data.readline()
 
 
