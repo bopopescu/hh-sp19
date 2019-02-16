@@ -1,5 +1,3 @@
-from .assignment import assignment
-from .Course import Course
+from .assignment import Assessment
+from .course import Course
 from .optimalChange import optimalChange
-
-
