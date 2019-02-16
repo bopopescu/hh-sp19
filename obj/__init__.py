@@ -1,5 +1,6 @@
-from .assignment import assignment
-from .Course import Course
-from .optimalChange import optimalChange
+from .GUI import GUI
 
-from __future__ import division
+from .assignment import Assessment
+from .course import Course
+from .optimalChange import optimalChange
+from .semester import Semester
