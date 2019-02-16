@@ -10,7 +10,11 @@ class Course:
         self.name = name
         self.assessments = assessments
         self.credits = credits
-        self.grade_dist = get_grade_dist()
+        if len(self.assessments) > 0:
+            self.grade = self.calculateGrade()
+        else:
+            self.grade = 100
+        self.grade_dist = self.get_grade_dist()
         self.dist = self.grade_dist.keys()
 
     def get_grade_dist(self):
