@@ -11,12 +11,13 @@ if __name__ == '__main__':
     #semester, course, credits, assignment, weight, grade
     if (isEmpty == False):
         line = gpa_data.readline()
-        
+
         while line:
-            inputs = line.split()
-            for input in inputs:
-                print(input)
+            descriptions = line.split(",")
+            for description in descriptions:
+                print(description)
             line = gpa_data.readline()
+
 
 
     print("What would you like to do?")
