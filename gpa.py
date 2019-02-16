@@ -1,5 +1,12 @@
-import obj
+from obj import *
 import os
+
+
+def print_all(couses):
+    for key in courses.keys():
+        courses[key].print()
+        print()
+
 
 if __name__ == '__main__':
     #opens gpa_data.txt file and checks if it is empty
@@ -12,21 +19,15 @@ if __name__ == '__main__':
     courses = {}
 
     if (not isEmpty):
-        line = gpa_data.readline()
-
-        while line:
-            descriptions = line.split(",")
-
+        lines = gpa_data.readlines()
+        for line in lines:
+            description = line.split(",")
             if description[0] in courses:
                 courses[description[0]].add_asst(description[2:])
             else:
-                temp = Course(descriptions[0], descriptions[1])
-                courses.append(temp)
-                courses.[description[0]].add_asst(description[2:])
-
-            line = gpa_data.readline()
-
-
+                temp = Course(description[0], int(description[1]))
+                courses[description[0]] = temp
+                courses[description[0]].add_asst(description[2:])
 
     print("What would you like to do?")
     print("1) Add a grade.")
@@ -37,20 +38,5 @@ if __name__ == '__main__':
     if (input == 1):
         print("Which class would you like to add a grade to?")
 
-
-    # num = int(input("Input Number of Subjects: "))
-    # subs = []
-    # for i in range(num):
-    #     course_name = input("Name of Course #{}: ".format(i + 1))
-    #     course = Course(course_name)
-    #     asst_len = int(input("Input number of assessments for {}: ".format(course_name)))
-    #     for j in range(asst_len):
-    #         asst_name = input("Input name of asst #{} for {}: ".format(j, course_name)))
-    #         asst_perc = int(input("Input percentage of {}".format(asst_name)))
-    #         asst = Assessment(asst_name, asst_perc)
-    #
-    #
-    #
-    # for i in range(len(subs)):
-    #     print(subs[i].get_name())
-    #
+    elif (input == 2):
+        print_all(courses)
