@@ -1,4 +1,5 @@
 import os
+from .Assessment import Assessment
 
 class Course:
 
@@ -6,18 +7,36 @@ class Course:
 
     dist = [90, 80, 70, 60, 50]
 
-    def __init__(self, name, assessments, credits):
+    def __init__(self, name, credits):
         self.name = name
-        self.assessments = assessments
+        self.assessments = {}
         self.credits = credits
-        self.grade_dist = get_grade_dist()
+        self.grade_dist = self.get_grade_dist()
         self.dist = self.grade_dist.keys()
+
+    def add_asst(self, asst):
+        if asst[0] in self.assessments:
+            self.assessments[asst[0]].add_grade(float(asst[-1]))
+        else:
+            self.assessments[asst[0]] = Assessment(asst[0], asst[1], asst[2], asst[3])
+            self.assessments[asst[0]].add_grade(float(asst[-1]))
+
+        #self.calculateGrade()
+    def print(self):
+        print("------- {0} ------({1})".format(self.name, self.credits))
+        print("--- Course Data ---")
+        for asst in self.assessments.keys():
+            print("---AVG %s: - %.2f" % (self.assessments[asst].get_name(), self.assessments[asst].get_average()))
+
+        print()
+        for asst in self.assessments.keys():
+            self.assessments[asst].print()
 
     def get_grade_dist(self):
         dist = {}
-        file = open("value-to-gpa.txt", "r")
+        file = open("value-to-grade.txt", "r")
         for line in file.readlines():
-            temp = line.split('')
+            temp = line.split(',')
             dist[int(temp[1])] = temp[0]
         return dist
 
@@ -46,8 +65,6 @@ class Course:
 
         return 100
 
-
-
     def minForNextGradeLine(self):
         target = self.findTarget()
         uncomplete = []
@@ -72,8 +89,3 @@ class Course:
 
     def get_name(self):
         return self.name
-
-    def add_asst(self, asst):
-        self.assessments[asst.name] = asst
-
-        self.calculateGrade()

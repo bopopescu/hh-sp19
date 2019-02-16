@@ -1,10 +1,10 @@
 class Assessment:
-    def __init__(self, name, percentage, grades, total, completed, isMidterm):
+    def __init__(self, name, percentage, total, isMidterm):
         self.name = name
         self.percentage = percentage
-        self.grades = grades
+        self.grades = []
         self.total = total
-        self.completed = completed
+        self.completed = 0
         self.isMidterm = isMidterm
 
     def add_grade(self, grade):
@@ -16,6 +16,9 @@ class Assessment:
     def get_percentage(self):
         return self.percentage
 
-    def get_average():
+    def get_average(self):
         avg = sum(self.grades, 0.0) / len(self.grades)
         return avg
+
+    def print(self):
+        print("---- {0} -- ({1}%): {2}".format(self.name, self.percentage, self.grades))
