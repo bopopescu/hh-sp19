@@ -11,6 +11,10 @@ class Course:
         self.name = name
         self.assessments = {}
         self.credits = credits
+        if len(self.assessments) > 0:
+            self.grade = self.calculateGrade()
+        else:
+            self.grade = None
         self.grade_dist = self.get_grade_dist()
         self.dist = self.grade_dist.keys()
 
@@ -20,8 +24,8 @@ class Course:
         else:
             self.assessments[asst[0]] = Assessment(asst[0], asst[1], asst[2], asst[3])
             self.assessments[asst[0]].add_grade(float(asst[-1]))
+        self.calculateGrade()
 
-        #self.calculateGrade()
     def print(self):
         print("------- {0} ------({1})".format(self.name, self.credits))
         print("--- Course Data ---")
@@ -89,3 +93,12 @@ class Course:
 
     def get_name(self):
         return self.name
+
+    def test_average(self):
+        avg = 0
+        for asst in self.assessments:
+            avg += asst.get_percentage() / float(100) * asst.get_average()
+        return avg
+        self.assessments[asst.name] = asst
+
+        self.calculateGrade()
