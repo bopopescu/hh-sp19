@@ -1,8 +1,9 @@
 
 class Course:
-    def __init__(self, name):
+    def __init__(self, name, credits):
         self.name = name
         self.assessments = []
+        self.credits = credits
 
     def get_name(self):
         return self.name
@@ -27,6 +28,19 @@ class Assessment():
 
 
 if __name__ == '__main__':
+
+    file gpa_data = open("gpa_data.txt", "r+")
+
+    print("What would you like to do?\n")
+    print("1) Add a grade.\n")
+    print("2) Look at grades. \n")
+
+    input = int(input("Please select 1 or 2 to continue: "))
+
+    if (input == 1) {
+        print("Which class would you like to add a grade to?")
+
+    }
     num = int(input("Input Number of Subjects: "))
     subs = []
     for i in range(num):
