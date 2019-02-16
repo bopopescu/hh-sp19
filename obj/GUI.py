@@ -1,8 +1,6 @@
 from tkinter import *
 
 import sqlite3 as sq
-
-<<<<<<< HEAD
 class GUI(Frame):
         top = Tk()
         # BEGIN GUI BOX.
