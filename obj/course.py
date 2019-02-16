@@ -24,7 +24,7 @@ class Course:
         else:
             self.assessments[asst[0]] = Assessment(asst[0], asst[1], asst[2], asst[3])
             self.assessments[asst[0]].add_grade(float(asst[-1]))
-        self.calculateGrade()
+        #self.calculateGrade()
 
     def print(self):
         print("------- {0} ------({1})".format(self.name, self.credits))
