@@ -1,10 +1,10 @@
-class Assessment():
-    def __init__(self, name, percentage, total, isMidterm):
+class Assessment:
+    def __init__(self, name, percentage, grades, total, completed, isMidterm):
         self.name = name
         self.percentage = percentage
-        self.grades = []
+        self.grades = grades
         self.total = total
-        self.completed = 0
+        self.completed = completed
         self.isMidterm = isMidterm
 
     def add_grade(self, grade):

@@ -1,6 +1,6 @@
 class optimalChange:
 
-    def optimalChange(self):
+    def __init__(self):
         self.Courses = []
 
     def addCourse(self, course):
@@ -18,7 +18,13 @@ class optimalChange:
             count += course.getAvg()
         return count / len(self.Courses)
 
-
+    def find(self):
+        best = []
+        for course in self.Courses:
+            arr = course.minForNextGradeLine()
+            temp = arr[3]
+            if temp < best[3]:
+                best = [course, arr, temp]
 
 
 
