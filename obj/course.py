@@ -34,8 +34,8 @@ class Course:
 
         target = target / uncompletedWeight
 
-        #return array of included assessments followed by avg score needed on them to move to next linez
-        return [uncomplete, target]
+        #return array of included assessments, avg score needed on future to move to next line, diff between this and avg
+        return [uncomplete, target, target - self.grade]
 
         #do algebra
 

@@ -9,7 +9,8 @@ def main():
     db = sq.connect('data/mydb')
     # ALL DATABASE CONNECTIONS BELOW HERE
 
-    assignment(50)
+    #for testing
+    A1 = assignment("midterm1", 20, 82, )
 
     GUI()
 
