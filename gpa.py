@@ -11,7 +11,7 @@ if __name__ == '__main__':
     #course, credits, assignment, weight, grade
     courses = {}
 
-    if (isEmpty == False):
+    if (not isEmpty):
         line = gpa_data.readline()
 
         while line:

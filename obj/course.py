@@ -1,3 +1,5 @@
+import os
+
 class Course:
 
     grade = 0
@@ -8,6 +10,16 @@ class Course:
         self.name = name
         self.assessments = {}
         self.credits = credits
+        self.grade_dist = get_grade_dist()
+        self.dist = self.grade_dist.keys()
+
+    def get_grade_dist(self):
+        dist = {}
+        file = open("value-to-gpa.txt", "r")
+        for line in file.readlines():
+            temp = line.split('')
+            dist[int(temp[1])] = temp[0]
+        return dist
 
     #next highest grade line
     def findTarget(self):
