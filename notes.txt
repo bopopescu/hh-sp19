@@ -1,0 +1,29 @@
+IDEAS
+
+    Questions: are we going to use a web app (i.e. major processing done server side)
+                or a stand alone program?
+
+CORE
+
+    - Determine the changes a student should make to improve there GPA the most
+
+    - Needs to take in number of credits, midterm grades, curve structure.
+
+    - Pretty GUI
+
+EXTENSION
+    - build in planner for courses holding pre req data (Ala degree audit)
+        - can load information from systems like sis.
+
+    - estimate future grades in classes based on estimated difficulty and
+    performance in previous similar classes.
+
+    - Automated retrieval of data
+
+CODE
+    - FRONT END
+        - java script?
+
+    - BACK END
+        - Python (speed and flexibility)
+            - can save data via pickle (easy!)
