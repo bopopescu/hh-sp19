@@ -74,17 +74,11 @@ class Course:
 
         #do algebra
 
-
-
-
-
-
-
-
     def get_name(self):
         return self.name
 
     def add_asst(self, asst):
+
         if asst[0] in self.assessments:
             self.assessments[asst[0]].add_grades(asst[-1])
         else :
