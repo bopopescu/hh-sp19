@@ -1,13 +1,14 @@
 from tkinter import *
+
 import sqlite3 as sq
 
-class GUI:
-    top = Tk()
-    # BEGIN GUI BOX.
+class GUI(Frame):
+        top = Tk()
+        # BEGIN GUI BOX.
 
-    text = Text(top)
-    text.insert(INSERT, "by Spencer, Kaushik, and Stephanie")
-    text.pack()
+        text = Text(top)
+        text.pack()
 
-    # END GUI BOX
-    top.mainloop()
+        # END GUI BOX
+        top.mainloop()
+
