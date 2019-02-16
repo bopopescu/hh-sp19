@@ -23,7 +23,6 @@ class optimalChange:
 
 
 
-
     print("will give best thing to improve")
 
 

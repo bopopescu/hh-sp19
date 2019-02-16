@@ -12,7 +12,7 @@ class Course:
     #next highest grade line
     def findTarget(self):
         for d in len(self.dist) - 2:
-            if self.grade > self.dist(d) && self.grade < self.dist(d+1):
+            if self.grade > self.dist(d) & self.grade < self.dist(d+1):
                 return self.dist(d)
 
         return 100
@@ -20,17 +20,25 @@ class Course:
 
 
     def minForNextGradeLine(self):
-        target = self.findTarget()
+        target = self.findTarget() * len(self.assessments)
         uncomplete = []
+        uncompletedWeight = 0
         complete = []
         for a in self.assessments:
             if (a.completed != a.total):
                 uncomplete.append(a)
+                uncompletedWeight += a.weight
             else:
                 complete.append(a)
                 target = target  - (a.weight * a.grade.sum())
 
+        target = target / uncompletedWeight
+
+        #return array of included assessments followed by avg score needed on them to move to next linez
+        return [uncomplete, target]
+
         #do algebra
+
 
 
 
