@@ -9,6 +9,21 @@ class Course:
         self.assessments = {}
         self.credits = credits
 
+        if len(self.assessments) != 0:
+            self.calculateGrade()
+        else:
+            self.grade = 0
+
+    def calculateGrade(self):
+        percentComplete = 0
+        grade = 0
+        # recalculate grade
+        for k in self.assessments:
+            percentComplete += self.assessments[k].percentage
+            grade += (self.assessments[k].grades.sum() / self.assessments[k].completed) * (
+                self.assessments[k].percentage)
+        self.grade = grade / percentComplete
+
     #next highest grade line
     def findTarget(self):
         for d in len(self.dist) - 2:
@@ -50,9 +65,6 @@ class Course:
         return self.name
 
     def add_asst(self, asst):
-        if asst[0] in self.assessments:
-            self.assessments[asst[0]].add_grades(asst[-1])
-        else :
-            self.assessments[asst[0]] = Assessment(asst[0], asst[1],
-            )
-        self.assessments.append(asst)
+        self.assessments[asst.name] = asst
+
+        self.calculateGrade()

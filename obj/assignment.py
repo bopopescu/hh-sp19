@@ -3,7 +3,7 @@ class Assessment():
         self.name = name
         self.percentage = percentage
         self.grades = []
-        #self.total = total
+        self.total = total
         self.completed = 0
         self.isMidterm = isMidterm
 
